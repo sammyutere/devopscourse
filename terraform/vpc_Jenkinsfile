@@ -9,7 +9,7 @@ pipeline {
         }}
         stage('Terraform Provision') {
             steps {
-                sh """
+                sh """            # Note that these cannot be run as individual shell commands
                     cd terraform
                     terraform init
                     terraform plan
